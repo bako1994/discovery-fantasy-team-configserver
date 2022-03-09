@@ -26,5 +26,5 @@ spring:
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5434/core_management_db
-    username: {cipher}976d903809384031b0b7814904c8963573e753c4f2c49b358dc4e3e3527ac368
-    password: {cipher}3640418dbef213a2d985b9b57c409be0c02739fb5bae87eb9b3188821be8c751
+    username: user
+    password: password
