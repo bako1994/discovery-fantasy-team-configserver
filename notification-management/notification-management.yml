@@ -1,1 +1,24 @@
-test-name=notification-management
+spring:
+  mail:
+    host: smtp.ethereal.email
+    port: 587
+    username: river.daniel6@ethereal.email
+    password: Ueed4tYQeBebEk3e5F
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    packages:
+      trust-all: true
+server:
+  error:
+    include-stacktrace: never
+  port: 8082
+fantasy-team-mail-queue: fantasy-team-mail-queue

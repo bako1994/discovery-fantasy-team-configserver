@@ -1,1 +1,22 @@
-test-name=user-management
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/user_management_db
+    username: user
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: create-drop
+  cache:
+    cache-names: customer
+#    redis:
+#      time-to-live: 600000
+#      key-prefix: um
+  redis:
+    host: localhost
+    port: 6379
+server:
+  error:
+    include-stacktrace: never
+  port: 8081
