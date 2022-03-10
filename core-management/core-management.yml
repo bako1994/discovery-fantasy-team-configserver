@@ -2,7 +2,7 @@ server:
   error:
     include-stacktrace: never
 
-default-balance: 50000
+default-balance: 60000
 user-service-url: http://localhost:8081/users
 elasticsearch:
   url: localhost:9200
