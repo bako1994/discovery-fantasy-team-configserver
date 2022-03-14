@@ -1,1 +1,27 @@
-test-name=main
+server:
+  error:
+    include-stacktrace: never
+  port: 0
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
+spring:
+  zipkin:
+    base-url: http://localhost:9411
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+#    web:
+#      skip-pattern: /users
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}

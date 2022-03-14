@@ -17,8 +17,4 @@ spring:
     password: admin
     packages:
       trust-all: true
-server:
-  error:
-    include-stacktrace: never
-  port: 8082
 fantasy-team-mail-queue: fantasy-team-mail-queue
