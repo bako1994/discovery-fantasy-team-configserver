@@ -25,19 +25,7 @@ spring:
           uri: user-management
           predicates:
             - Path=/users/**
-  application:
-    name: gateway
 
 info:
   app:
     name: ${spring.application.name}
-
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include:
-#          - mappings
-#          - env
-#          - health
-#          - info
