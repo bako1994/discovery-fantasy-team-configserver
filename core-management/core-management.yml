@@ -1,5 +1,5 @@
 default-balance: 60000
-user-service-url: lb://user-management/users
+user-service-url: http://user-management/users
 elasticsearch:
   url: localhost:9200
 fantasy-team-mail-queue: fantasy-team-mail-queue
