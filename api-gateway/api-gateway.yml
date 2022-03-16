@@ -21,8 +21,8 @@ spring:
           uri: lb://core-management
           predicates:
             - Path=/transactions/**
-        - id: users_route
-          uri: user-management
+        - id: user_route
+          uri: lb://user-management
           predicates:
             - Path=/users/**
 
