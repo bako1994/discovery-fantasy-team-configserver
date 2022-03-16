@@ -24,4 +24,4 @@ management:
         include: '*'
 eureka:
   instance:
-    instance-id: ${spring.application.name}:${server.port}:${random.uuid}
+    instance-id: ${spring.application.name}:${random.uuid}
