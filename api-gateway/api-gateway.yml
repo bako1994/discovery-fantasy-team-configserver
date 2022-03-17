@@ -15,32 +15,22 @@ spring:
           uri: lb://core-management
           predicates:
             - Path=/users/**
-          filters:
-            - RewritePath=/users/(?<path>.*), /$\{path}
         - id: transfer_list_route
           uri: lb://core-management
           predicates:
             - Path=/transfer-list/**
-          filters:
-            - RewritePath=/transfer-list/(?<path>.*), /$\{path}
         - id: players_route
           uri: lb://core-management
           predicates:
             - Path=/players/**
-          filters:
-            - RewritePath=/players/(?<path>.*), /$\{path}
         - id: transactions_route
           uri: lb://core-management
           predicates:
             - Path=/transactions/**
-          filters:
-            - RewritePath=/transactions/(?<path>.*), /$\{path}
         - id: user_route
           uri: lb://user-management
           predicates:
             - Path=/users/**
-          filters:
-            - RewritePath=/users/(?<path>.*), /$\{path}
           - id: openapi
           uri: http://localhost:${server.port}
           predicates:
