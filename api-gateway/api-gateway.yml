@@ -8,31 +8,31 @@ spring:
         user
       password:
         password
+        
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: core_route
           uri: lb://core-management
           predicates:
-            - Path=/core/**
+          - Path=/core/**
           filters:
-            - RewritePath=/core/(?<path>.*), /$\{path}
-            
+          - RewritePath=/core/(?<path>.*), /$\{path}
         - id: user_route
           uri: lb://user-management
           predicates:
-            - Path=/user/**
+          - Path=/user/**
           filters:
-            - RewritePath=/user/(?<path>.*), /$\{path}
-            
+          - RewritePath=/user/(?<path>.*), /$\{path}  
         - id: openapi
           uri: http://localhost:${server.port}
           predicates:
-            - Path=/v3/api-docs/**
+          - Path=/v3/api-docs/**
           filters:
-            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
-          
-          
+          - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
 
 info:
   app:
