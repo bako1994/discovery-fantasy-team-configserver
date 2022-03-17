@@ -11,26 +11,20 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: users_route
+        - id: core_route
           uri: lb://core-management
           predicates:
-            - Path=/users/**
-        - id: transfer_list_route
-          uri: lb://core-management
-          predicates:
-            - Path=/transfer-list/**
-        - id: players_route
-          uri: lb://core-management
-          predicates:
-            - Path=/players/**
-        - id: transactions_route
-          uri: lb://core-management
-          predicates:
-            - Path=/transactions/**
+            - Path=/core/**
+          filters:
+            - RewritePath=/core/(?<path>.*), /$\{path}
+            
         - id: user_route
           uri: lb://user-management
           predicates:
-            - Path=/users/**
+            - Path=/user/**
+          filters:
+            - RewritePath=/user/(?<path>.*), /$\{path}
+            
         - id: openapi
           uri: http://localhost:${server.port}
           predicates:
