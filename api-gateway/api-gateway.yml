@@ -1,7 +1,13 @@
 server:
   port: 8083
   
-spring:     
+spring:
+  security:
+    user:
+      name:
+        user
+      password:
+        password
   cloud:
     gateway:
       discovery:
