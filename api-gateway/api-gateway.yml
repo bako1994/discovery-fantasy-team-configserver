@@ -7,8 +7,8 @@ spring:
       client:
         registration:
           github:
-            clientId: b541d544e570dd0e355c
-            clientSecret: d73c9299cd22e06a8d6d6970cae0bd687a0d9b3d
+            client-id: b541d544e570dd0e355c
+            client-secret: d73c9299cd22e06a8d6d6970cae0bd687a0d9b3d
   cloud:
     gateway:
       discovery:
